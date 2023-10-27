@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const actuator = require('express-actuator');
 const helmet = require('helmet');
 const {name, version} = require('./package.json');
-const nsfwRouter = require('./routes/nsfwRoute');
+const nsfwRouter = require('./src/routes/nsfwRoute');
 
 const PORT = 8080;
 const app = express();
