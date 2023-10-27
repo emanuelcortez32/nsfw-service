@@ -1,8 +1,14 @@
-version: "2"
+version: "3"
 services:
-  nsfwservice:
+  nsfw-service:
+    container_name: nsfw-service
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "3000:8080"
+    networks:
+      - greenbundle-containers-network
+networks:
+  greenbundle-containers-network:
+    external: true
