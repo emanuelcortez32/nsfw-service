@@ -1,0 +1,8 @@
+version: "2"
+services:
+  nsfwservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:8080"
