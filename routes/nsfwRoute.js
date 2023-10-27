@@ -5,7 +5,6 @@ const { nsfwController } = require('../controller/nsfwController');
 
 const router = express.Router();
 
-
 router.post('/detect', uploaderFileMiddleware, nsfwController);
 
 module.exports = router;
