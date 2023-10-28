@@ -8,7 +8,7 @@ services:
     ports:
       - "3000:8080"
     networks:
-      - greenbundle-containers-network
+      - main-greenbundle-docker-net
 networks:
-  greenbundle-containers-network:
+  main-greenbundle-docker-net:
     external: true
