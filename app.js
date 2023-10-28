@@ -22,5 +22,5 @@ app.use(cookieParser());
 app.use('/nsfw', nsfwRouter);
 
 app.listen(PORT, () => {
-    console.log(`${name} ${version} is running!!`);
+    console.log(`${name} ${version} is running on port: ${PORT}!!`);
 });
