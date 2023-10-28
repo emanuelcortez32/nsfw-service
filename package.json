@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
     "nodemon": "^2.0.15"
   },
   "author": "greenbundle.com.ar",

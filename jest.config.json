@@ -1,0 +1,33 @@
+{
+  "testRegex": "(test|spec)\\.js?$",
+  "moduleFileExtensions": ["ts", "js", "json", "node"],
+  "verbose": true,
+  "collectCoverage": true,
+  "coverageReporters": ["text", "html"],
+  "coverageDirectory": "dist/coverage",
+  "collectCoverageFrom": [
+    "src/**/*.{ts,js}",
+    "!**/node_modules/**"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "lines": 85,
+      "statements": 85,
+      "branchs": 85
+    }
+  },
+  "reporters": [
+    "default",
+    [
+      "./node_modules/jest-html-reporter",
+      {
+        "pageTitle": "NSFW Service Test Result",
+        "includeFailureMsg": true,
+        "includeConsoleLog": true,
+        "theme": "darkTheme",
+        "sort": "status",
+        "outputPath": "./dist/coverage/UnitTestsReport.html"
+      }
+    ]
+  ]
+}
