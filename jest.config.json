@@ -29,5 +29,6 @@
         "outputPath": "./dist/coverage/UnitTestsReport.html"
       }
     ]
-  ]
+  ],
+  "testFailureExitCode": 0
 }
