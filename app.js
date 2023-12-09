@@ -3,6 +3,8 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const actuator = require('express-actuator');
 const helmet = require('helmet');
+const listEndpoints = require('express-list-endpoints')
+
 const {name, version} = require('./package.json');
 const nsfwRouter = require('./src/routes/nsfwRoute');
 
@@ -24,4 +26,5 @@ app.use(BASE_PATH, nsfwRouter);
 
 app.listen(PORT, () => {
     console.log(`${name} ${version} is running on port: ${PORT}!!`);
+    console.log(listEndpoints(app));
 });
