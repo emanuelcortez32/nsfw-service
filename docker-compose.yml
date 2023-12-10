@@ -7,10 +7,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      TZ: America/Argentina/Buenos_Aires
     expose:
       - "8080"
     networks:
       - main-greenbundle-docker-net
+
 networks:
   main-greenbundle-docker-net:
     external: true
