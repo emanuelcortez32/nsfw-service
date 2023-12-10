@@ -1,7 +1,9 @@
 version: "3"
 services:
   nsfw-service:
+    restart: on-failure
     container_name: nsfw-service
+    image: nsfw-service
     build:
       context: .
       dockerfile: Dockerfile
