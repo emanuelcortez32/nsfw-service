@@ -7,6 +7,7 @@ const listEndpoints = require('express-list-endpoints')
 
 const {name, version} = require('./package.json');
 const nsfwRouter = require('./src/routes/nsfwRoute');
+const { jsonFormat } = require('./src/utils/loggerUtils');
 
 const BASE_PATH = "/nsfw";
 const PORT = 8080;
@@ -15,7 +16,7 @@ const app = express();
 //Middlewares
 app.use(helmet());
 app.use(actuator({basePath: BASE_PATH}));
-app.use(morgan('combined'));
+app.use(morgan(jsonFormat));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
