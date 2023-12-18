@@ -24,5 +24,5 @@ const jsonFormat = (tokens, req, res) => {
 }
 
 module.exports = {
-    jsonFormat
+    stdoutLogger: morgan(jsonFormat)
 };

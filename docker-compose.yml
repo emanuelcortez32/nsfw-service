@@ -11,6 +11,8 @@ services:
       TZ: America/Argentina/Buenos_Aires
     expose:
       - "8080"
+    volumes:
+      - /var/log/apps/nsfw-service:/logs
     networks:
       - main-greenbundle-docker-net
     #logging:
