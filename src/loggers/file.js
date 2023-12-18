@@ -9,6 +9,6 @@ const rfsStream = rfs.createStream("./logs/nsfw-service.log", {
 
 module.exports = {
     fileLogger : morgan('combined', {
-        stream: fs.createWriteStream('./logs/', { flags: 'a'})
+        stream: rfsStream
     })
 }
