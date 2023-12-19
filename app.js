@@ -16,9 +16,12 @@ const app = express();
 
 //Middlewares
 app.use(helmet());
-app.use(actuator({basePath: BASE_PATH}));
+
 app.use(fileLogger);
 app.use(stdoutLogger);
+
+app.use(actuator({basePath: BASE_PATH}));
+
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
